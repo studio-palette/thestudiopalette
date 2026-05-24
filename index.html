@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>🌸 TheStudioPalette | Caliart Art Kit 🌸</title>
+    <style>
+        /* Cute & Playful Font Setup */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@500;700&display=swap');
+
+        :root {
+            --bg-pastel: #fff9f5;        /* Soft sweet cream */
+            --cloud-white: #ffffff;
+            --kawaii-pink: #ffb7c5;      /* Bubblegum/Sakura pastel pink */
+            --kawaii-orange: #ff9e7d;    /* Bright happy terracotta orange */
+            --kawaii-yellow: #ffe3a8;    /* Soft sunny yellow */
+            --kawaii-purple: #e3dcff;    /* Creative pastel lavender */
+            --text-cozy: #4a3e3d;        /* Deep warm brown (much softer than harsh black) */
+            --text-muted: #8c7674;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-pastel);
+            color: var(--text-cozy);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            /* Fun, subtle artistic background shapes */
+            background-image: 
+                radial-gradient(circle at 10% 20%, var(--kawaii-purple) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, var(--kawaii-yellow) 0%, transparent 25%);
+            background-attachment: fixed;
+        }
+
+        /* 1. Playful, Bouncy Header */
+        header.kawaii-header {
+            width: 100%;
+            max-width: 750px;
+            background: var(--cloud-white);
+            text-align: center;
+            padding: 20px;
+            border-radius: 24px;
+            border: 4px solid var(--kawaii-pink);
+            box-shadow: 0 8px 0px var(--kawaii-pink); /* Fun pop-art style shadow */
+            margin-bottom: 35px;
+            margin-top: 10px;
+        }
+
+        header.kawaii-header h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.4rem;
+            color: var(--text-cozy);
+            letter-spacing: 1px;
+        }
+
+        header.kawaii-header h1 span {
+            color: var(--kawaii-orange);
+            text-shadow: 2px 2px 0px var(--kawaii-yellow);
+        }
+
+        /* 2. Cozy Central Showcase Card */
+        .main-card {
+            background: var(--cloud-white);
+            width: 100%;
+            max-width: 750px;
+            border-radius: 32px;
+            border: 4px solid var(--kawaii-purple);
+            box-shadow: 0 12px 0px var(--kawaii-purple);
+            padding: 35px;
+            margin-bottom: 40px;
+        }
+
+        /* Cute Overlap Badge */
+        .kawaii-badge {
+            background-color: var(--kawaii-yellow);
+            color: var(--text-cozy);
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 2px dashed var(--kawaii-orange);
+            margin-bottom: 15px;
+        }
+
+        h2.product-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.1rem;
+            line-height: 1.2;
+            color: var(--text-cozy);
+            margin-bottom: 25px;
+        }
+
+        /* 3. Artistic Decorated Image Frame */
+        .art-frame {
+            width: 100%;
+            border-radius: 20px;
+            border: 4px solid var(--text-cozy);
+            overflow: hidden;
+            box-shadow: 8px 8px 0px var(--text-cozy);
+            margin-bottom: 35px;
+            background-color: var(--bg-pastel);
+        }
+
+        .art-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 4. Playful Typography & Descriptions */
+        p.sparkle-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p.body-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        /* 5. Candy-Colored Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .feature-bubble {
+            padding: 18px;
+            border-radius: 18px;
+            border: 3px solid var(--text-cozy);
+            box-shadow: 4px 4px 0px var(--text-cozy);
+            transition: transform 0.2s ease;
+        }
+
+        .feature-bubble:hover {
+            transform: scale(1.02);
+        }
+
+        /* Alternate bubble pastel backgrounds */
+        .feature-bubble:nth-child(1) { background-color: var(--kawaii-pink); }
+        .feature-bubble:nth-child(2) { background-color: var(--kawaii-yellow); }
+        .feature-bubble:nth-child(3) { background-color: var(--kawaii-purple); }
+        .feature-bubble:nth-child(4) { background-color: #d2f5e3; } /* Pastel Mint */
+
+        .feature-bubble h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-bubble p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* 6. Adorable Custom Option Selectors */
+        .selector-box {
+            margin: 30px 0;
+            background: var(--bg-pastel);
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed var(--kawaii-pink);
+        }
+
+        .selector-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .option-pill {
+            background: var(--cloud-white);
+            border: 3px solid var(--text-cozy);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-cozy);
+            cursor: pointer;
+            box-shadow: 3px 3px 0px var(--text-cozy);
+        }
+
+        /* 7. Super Juice, High-Converting Bouncy Button */
+        .cta-wrapper {
+            text-align: center;
+            margin: 35px 0 15px 0;
+        }
+
+        .kawaii-button {
+            display: inline-block;
+            background-color: var(--kawaii-orange);
+            color: #ffffff !important;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            border: 4px solid var(--text-cozy);
+            box-shadow: 0 8px 0px var(--text-cozy);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .kawaii-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 0px var(--text-cozy);
+            background-color: #ff855c;
+        }
+
+        .kawaii-button:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0px var(--text-cozy);
+        }
+
+        .cozy-disclaimer {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            font-style: italic;
+            margin-top: 25px;
+        }
+
+        /* Mobile Layout Adjustments */
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            header.kawaii-header h1 {
+                font-size: 1.8rem;
+            }
+            h2.product-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="kawaii-header">
+        <h1>🎨 THESTUDIO<span>PALETTE</span> ✨</h1>
+    </header>
+     <div class="main-card">
+        
+        <div class="kawaii-badge">🌸 Best Seller Choice</div>
+        <h2 class="product-title">Caliart 176-Piece Art Supplies Sketching Kit</h2>
+        
+        <div class="art-frame">
+            <img src="http://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Caliart Beautiful 176 Pieces Art Supplies Kit" style="width: 100%; max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 5px rgba(0,0,0,0.05);">
+        </div>
+        
+        <p class="sparkle-text">⭐ Unleash your inner masterpiece with the ultimate all-in-one studio experience! ⭐</p>
+        
+        <p class="body-text">
+            Whether you are a budding enthusiast or a seasoned professional, this beautiful kit provides an unparalleled spectrum of creative tools to bring your imagination straight to life. 
+        </p>
+        
+        <p class="body-text">
+            Thoughtfully curated to cover every aspect of drawing, sketching, and shading. It even comes with a bespoke 100-sheet, 3-colour sketchbook with toned pages to make your highlights totally pop!
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-bubble">
+                <h3>✏️ 176 Cute Pieces</h3>
+                <p>A massive, beautiful selection of tools organized perfectly for your daily workflow.</p>
+            </div>
+            <div class="feature-bubble">
+                <h3>🌈 Rich Mediums</h3>
+                <p>Includes velvety Graphites, vibrant Coloured pencils, deep Charcoal, and fluid Watercolors!</p>
+            </div>
+            <div class="feature-bubble">
+                <h3>📖 3-Color Book</h3>
+                <p>100 premium sheets split into unique magical page tones to experiment with light and depth.</p>
+            </div>
+            <div class="feature-bubble">
+                <h3>🎒 Portable Shell</h3>
+                <p>Housed in a sleek, travel-friendly carrying case to protect your tools wherever you go!</p>
+            </div>
+        </div>
+
+        <div class="selector-box">
+            <div class="selector-title">🎀 Choose Your Edition:</div>
+            <button class="option-pill">✨ 176-Piece Ultimate Kit</button>
+        </div>
+
+        <div class="cta-wrapper">
+            <a href="https://a.co/d/058TsfYb" class="kawaii-button" target="_blank">👉 CLICK HERE TO BUY ON AMAZON! 👈</a>
+        </div>
+
+        <p class="cozy-disclaimer">🌸 As an affiliate partner, we may earn a small cozy commission from qualifying purchases at absolutely no extra cost to you! 🌸</p>
+        
+    </div>
+
+</body>
+</html>
